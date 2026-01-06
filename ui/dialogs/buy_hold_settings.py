@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from utils.config_loader import save_yaml
+from utils.options_utils import save_yaml
 
 def open_buy_and_hold_settings(self):
     window = tk.Toplevel(self.root)

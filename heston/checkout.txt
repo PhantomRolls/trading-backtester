@@ -1,0 +1,8 @@
+git fetch origin
+git checkout origin/main -- market_data/SPY.csv
+git checkout origin/main -- market_data/NVDA.csv
+git checkout origin/main -- market_data/MSFT.csv
+git checkout origin/main -- market_data/QQQ.csv
+git checkout origin/main -- market_data/AAPL.csv
+git checkout origin/main -- market_data/TSLA.csv
+git checkout origin/main -- market_data/riskfree.csv

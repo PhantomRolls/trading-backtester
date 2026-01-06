@@ -2,36 +2,36 @@ import numpy as np
 from scipy.stats import norm
 
 
-def call(S, K, T, r, sigma):
-    d1 = (np.log(S / K) + (r + sigma**2/2) * T) / (sigma * np.sqrt(T))
-    d2 = d1 - sigma * np.sqrt(T)
-    return S * norm.cdf(d1) - K * np.exp(- r * T) * norm.cdf(d2)
+def call(S, K, tau, r, sigma):
+    d1 = (np.log(S / K) + (r + sigma**2/2) * tau) / (sigma * np.sqrt(tau))
+    d2 = d1 - sigma * np.sqrt(tau)
+    return S * norm.cdf(d1) - K * np.exp(- r * tau) * norm.cdf(d2)
 
-def put(S, K, T, r, sigma):
-    d1 = (np.log(S / K) + (r + sigma**2/2) * T) / (sigma * np.sqrt(T))
-    d2 = d1 - sigma * np.sqrt(T)
-    return K * np.exp(- r * T) * norm.cdf(-d2) - S * norm.cdf(-d1)
+def put(S, K, tau, r, sigma):
+    d1 = (np.log(S / K) + (r + sigma**2/2) * tau) / (sigma * np.sqrt(tau))
+    d2 = d1 - sigma * np.sqrt(tau)
+    return K * np.exp(- r * tau) * norm.cdf(-d2) - S * norm.cdf(-d1)
 
-def straddle(S, K, T, r, sigma):
-    return call(S, K, T, r, sigma) + put(S, K, T, r, sigma)
+def straddle(S, K, tau, r, sigma):
+    return call(S, K, tau, r, sigma) + put(S, K, tau, r, sigma)
 
 
-def compute_iv(price_market, S, K, T, r, right,
+def compute_iv(price_market, S, K, tau, r, right,
                tol=1e-6, max_iter=100,
                sig_low=1e-8, sig_high=10.0):
 
     # ---- 1. Cas triviaux ------------------------------------
-    if price_market <= 0 or T <= 0:
+    if price_market <= 0 or tau <= 0:
         return np.nan
 
     # ---- 2. Bornes du prix ----------------------------------
     # prix min et max en BS
-    forward = S * np.exp(r * T)
+    forward = S * np.exp(r * tau)
     
     if right == 'C':
-        price_min = max(0, S - K * np.exp(-r*T))
+        price_min = max(0, S - K * np.exp(-r*tau))
     else:  # PUT
-        price_min = max(0, K * np.exp(-r*T) - S)
+        price_min = max(0, K * np.exp(-r*tau) - S)
 
     if price_market < price_min - 1e-12:
         # aucune volatilité ne peut générer ce prix (option trop bon marché)
@@ -43,9 +43,9 @@ def compute_iv(price_market, S, K, T, r, right,
 
         # Prix modèle
         if right == 'C':
-            model = call(S, K, T, r, sig_mid)
+            model = call(S, K, tau, r, sig_mid)
         else:
-            model = put(S, K, T, r, sig_mid)
+            model = put(S, K, tau, r, sig_mid)
 
         diff = model - price_market
 

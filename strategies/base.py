@@ -6,7 +6,7 @@ from rich.table import Table
 import sys
 import os
 import json
-from utils.config_loader import load_yaml
+from utils.options_utils import load_yaml
 
 class BaseStrategy(ABC):
     def __init__(self):

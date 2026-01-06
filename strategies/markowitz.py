@@ -1,5 +1,5 @@
 from strategies.base import BaseStrategy
-from utils.data_handler import DataHandler
+from utils.backtest_utils import DataHandler
 import pandas as pd
 import numpy as np
 import cvxpy as cp
@@ -12,7 +12,7 @@ from strategies.buy_and_hold import BuyAndHold
 from tqdm import tqdm
 import sys 
 import tracemalloc
-from utils.config_loader import load_yaml
+from utils.options_utils import load_yaml
 
 class Markowitz(BaseStrategy):
     def __init__(self, assets):

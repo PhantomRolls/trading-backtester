@@ -1,6 +1,6 @@
 import config
 from strategies.base import BaseStrategy
-from utils.data_handler import DataHandler
+from utils.backtest_utils import DataHandler
 import datetime
 import pandas as pd
 import numpy as np
@@ -8,7 +8,7 @@ from core.execution import OrderExecutor
 from core.compute_performance import PerformanceAnalyzer
 from core.portfolio import Portfolio
 from tabulate import tabulate
-from utils.config_loader import load_yaml
+from utils.options_utils import load_yaml
 
 class BuyAndHold(BaseStrategy):
     def __init__(self, preset):

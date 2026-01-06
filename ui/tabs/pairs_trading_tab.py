@@ -5,7 +5,7 @@ import importlib
 import config
 from ui.dialogs.pairs_trading_settings import open_pairs_trading_settings
 from ui.widgets.value_label import ValueLabel
-from utils.config_loader import save_yaml
+from utils.options_utils import save_yaml
 
 
 def create_pairs_trading_tab(app):

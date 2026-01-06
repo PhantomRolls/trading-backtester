@@ -6,7 +6,7 @@ from ui.tabs.pairs_trading_tab import create_pairs_trading_tab
 from ui.tabs.markowitz_tab import create_markowitz_tab
 from ui.tabs.iv_crush_tab import create_iv_crush_tab
 import tkinter.scrolledtext as scrolledtext
-from utils.config_loader import load_yaml, save_yaml
+from utils.options_utils import load_yaml, save_yaml
 
 
 class StrategyApp:

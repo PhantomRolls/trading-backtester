@@ -6,7 +6,7 @@ import config
 from ui.dialogs.markowitz_settings import open_markowitz_settings
 from ui.widgets.tooltip import ToolTip
 from ui.widgets.value_label import ValueLabel
-from utils.config_loader import save_yaml
+from utils.options_utils import save_yaml
 
 def create_markowitz_tab(app):
     """

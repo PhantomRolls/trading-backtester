@@ -1,7 +1,7 @@
 # ui/tabs/param_tab.py
 from tkinter import ttk
-import json, os, tkinter as tk
-from utils.config_loader import save_yaml
+import tkinter as tk
+from utils.options_utils import save_yaml
 
 def create_param_tab(self):
         frame = ttk.Frame(self.notebook)

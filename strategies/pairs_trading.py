@@ -1,6 +1,6 @@
 import statsmodels.api as sm
 from strategies.base import BaseStrategy
-from utils.data_handler import DataHandler
+from utils.backtest_utils import DataHandler
 import pandas as pd
 from core.portfolio import Portfolio
 from core.execution import OrderExecutor
@@ -11,7 +11,7 @@ import sys
 import os
 import json
 import numpy as np
-from utils.config_loader import load_yaml
+from utils.options_utils import load_yaml
 
 class PairsTradingStrategy(BaseStrategy):
     def __init__(self, pair):

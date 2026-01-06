@@ -5,7 +5,7 @@ import importlib
 import config
 from ui.dialogs.buy_hold_settings import open_buy_and_hold_settings
 from ui.widgets.value_label import ValueLabel
-from utils.config_loader import save_yaml
+from utils.options_utils import save_yaml
 
 def create_buy_hold_tab(app):
     frame = ttk.Frame(app.notebook)
