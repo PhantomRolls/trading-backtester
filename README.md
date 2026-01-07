@@ -29,7 +29,7 @@ select assets and strategies, and visualize results.
 ![Markowitz optimization](images/markowitz.png)
 
 ### Interactive performance visualization
-![Portfolio performance](images/paris_trading.png)
+![Portfolio performance](images/pairs_trading.png)
 
 ## Implemented strategies
 
