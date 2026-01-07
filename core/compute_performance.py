@@ -250,7 +250,7 @@ class PerformanceAnalyzer(BaseStrategy):
         for r in range(1, total_rows):
             fig.update_xaxes(showticklabels=False, row=r, col=1)
 
-        # fig.write_html(f"output/{self.strategy.name}/portfolio_plot.html", auto_open=True)
+        fig.write_html(f"output/{self.strategy.name}/portfolio_plot.html", auto_open=True)
 
 
     def add_performance_fill(self, fig, x, portfolio, benchmark, row, col):

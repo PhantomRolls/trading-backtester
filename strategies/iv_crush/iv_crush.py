@@ -36,13 +36,13 @@ class OptionsStrategy():
         if strike == "ATM":
             strike = pre_close
             
-        pre_straddle = straddle(S=pre_close, K=strike, tau=T/365, sigma=pre_iv)
-        post_straddle = straddle(S=post_price, K=strike, tau=T/365, sigma=post_iv)
+        pre_straddle = straddle(S=pre_close, K=strike, tau=T/365, sigma=pre_iv, r=0.04)
+        post_straddle = straddle(S=post_price, K=strike, tau=T/365, sigma=post_iv, r=0.04)
         
-        pre_call = call(S=pre_close, K=strike, tau=T/365, sigma=pre_iv)
-        post_call = call(S=post_price, K=strike, tau=T/365, sigma=post_iv)
-        pre_put = put(S=pre_close, K=strike, tau=T/365, sigma=pre_iv)
-        post_put = put(S=post_price, K=strike, tau=T/365, sigma=post_iv)
+        pre_call = call(S=pre_close, K=strike, tau=T/365, sigma=pre_iv, r=0.04)
+        post_call = call(S=post_price, K=strike, tau=T/365, sigma=post_iv, r=0.04)
+        pre_put = put(S=pre_close, K=strike, tau=T/365, sigma=pre_iv, r=0.04)
+        post_put = put(S=post_price, K=strike, tau=T/365, sigma=post_iv, r=0.04)
         
 
         short_straddle_pnl = pre_straddle - post_straddle
