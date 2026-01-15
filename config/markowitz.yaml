@@ -1,0 +1,198 @@
+rebalance_window: 21
+lookback_window: 252
+risk_free_rate: 0.02
+diversification: 0.7
+assets:
+- SPY
+- QQQ
+- VEA
+- EEM
+- BIL
+- GLD
+asset_pool:
+- SPY
+- VOO
+- VTI
+- IVV
+- QQQ
+- DIA
+- IWM
+- VEA
+- IEFA
+- ACWI
+- VT
+- VXUS
+- EEM
+- VWO
+- IEMG
+- EMXC
+- BND
+- AGG
+- TLT
+- LQD
+- HYG
+- IEF
+- SHY
+- SGOV
+- BIL
+- SHV
+- XLK
+- XLF
+- XLV
+- XLY
+- XLE
+- XLI
+- XLB
+- XLU
+- XLRE
+- XLC
+- GLD
+- SLV
+- DBC
+- USO
+- DBA
+- PPLT
+- CPER
+- VNQ
+- IYR
+- SCHH
+- REET
+- SPLV
+- USMV
+- MTUM
+- QUAL
+- VIG
+- DVY
+- RSP
+- SPHD
+- UUP
+- FXE
+- FXF
+start_dates:
+  ACWI: '2008-03-28'
+  AGG: '2003-09-29'
+  BIL: '2007-05-30'
+  BND: '2007-04-10'
+  CPE: '2011-11-15'
+  DBA: '2007-01-05'
+  DBC: '2006-02-06'
+  DIA: '1998-01-20'
+  DVY: '2003-11-07'
+  EEM: '2003-04-14'
+  EMXC: '2017-07-26'
+  FXE: '2005-12-12'
+  FXF: '2006-06-26'
+  GLD: '2004-11-18'
+  HYG: '2007-04-11'
+  IEF: '2002-07-30'
+  IEFA: '2012-10-24'
+  IEMG: '2012-10-24'
+  IVV: '2000-05-19'
+  IWM: '2000-05-26'
+  IYR: '2000-06-19'
+  LQD: '2002-07-30'
+  MTUM: '2013-04-18'
+  PPLT: '2010-01-08'
+  QQQ: '1999-03-10'
+  QUAL: '2013-07-18'
+  REET: '2014-07-10'
+  RSP: '2003-05-01'
+  SCHH: '2011-01-13'
+  SGOV: '2020-06-01'
+  SHV: '2007-01-11'
+  SHY: '2002-07-30'
+  SLV: '2006-04-28'
+  SPHD: '2012-10-26'
+  SPLV: '2011-05-05'
+  SPY: '1993-01-29'
+  TLT: '2002-07-30'
+  USMV: '2011-10-20'
+  USO: '2006-04-10'
+  UUP: '2007-03-01'
+  VEA: '2007-07-26'
+  VIG: '2006-05-02'
+  VNQ: '2004-09-29'
+  VOO: '2010-09-09'
+  VT: '2008-06-26'
+  VTI: '2001-06-15'
+  VWO: '2005-03-10'
+  VXUS: '2011-01-28'
+  XLB: '1998-12-22'
+  XLC: '2018-06-19'
+  XLE: '1998-12-22'
+  XLF: '1998-12-22'
+  XLI: '1998-12-22'
+  XLK: '1998-12-22'
+  XLR: '2015-10-08'
+  XLU: '1998-12-22'
+  XLV: '1998-12-22'
+  XLY: '1998-12-22'
+asset_categories:
+  Indices US:
+    SPY: S&P 500
+    VOO: S&P 500 (Vanguard)
+    VTI: Marché total US
+    IVV: S&P 500 (iShares)
+    QQQ: Nasdaq-100
+    DIA: Dow Jones
+    IWM: Russell 2000 (small caps)
+    RSP: S&P 500 équipondéré
+  Secteurs US:
+    XLK: Technologie
+    XLF: Finance
+    XLV: Santé
+    XLY: Consommation discrétionnaire
+    XLE: Énergie
+    XLI: Industrie
+    XLB: Matériaux
+    XLU: Services publics
+    XLRE: Immobilier
+    XLC: Communication
+  Smart Beta / Facteurs:
+    SPLV: Volatilité faible
+    USMV: Volatilité minimale
+    MTUM: Momentum
+    QUAL: Qualité
+    VIG: Dividendes croissants
+    DVY: Dividendes élevés
+    SPHD: Rendement élevé + faible volatilité
+  International Développé:
+    VEA: Europe, Japon, etc.
+    IEFA: Pays développés hors US
+    ACWI: Monde développé + émergents
+    VT: Marché mondial total
+    VXUS: Monde hors US
+  Marchés Émergents:
+    EEM: ETF marchés émergents
+    VWO: Large marchés émergents
+    IEMG: ETF émergents (core)
+    EMXC: Émergents hors Chine
+  Obligations US:
+    BND: Obligations agrégées US
+    AGG: US Aggregate Bond Index
+    TLT: Oblig. long terme
+    IEF: Oblig. moyen terme
+    SHY: Oblig. court terme
+    LQD: Oblig. corporate IG
+    HYG: Oblig. haut rendement (junk)
+  Trésorerie / Sans Risque:
+    SGOV: Bons du Trésor 0-3 mois
+    BIL: Treasury Bills 1-3 mois
+    SHV: Obligations ≤ 1 an
+  Matières Premières:
+    GLD: Or
+    SLV: Argent
+    DBC: Panier matières premières
+    USO: Pétrole brut WTI
+    DBA: Agriculture
+    PPLT: Platine
+    CPER: Cuivre
+  Immobilier (REITs):
+    VNQ: REITs US (Vanguard)
+    IYR: REITs US (iShares)
+    SCHH: REITs US (Schwab)
+    REET: REITs globaux
+  Devises:
+    UUP: Dollar US haussier
+    FXE: Euro haussier
+    FXF: Franc suisse haussier

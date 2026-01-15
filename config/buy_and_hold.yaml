@@ -1,0 +1,31 @@
+preset: balanced
+reallocation_window: 21
+reallocation_amount: 0.0
+portfolio_presets:
+  balanced:
+    SPY: 0.3
+    QQQ: 0.1
+    GLD: 0.1
+    TLT: 0.1
+    EEM: 0.15
+    XLE: 0.1
+    IEF: 0.15
+  aggressive:
+    SPY: 0.4
+    QQQ: 0.2
+    EEM: 0.2
+    XLE: 0.1
+    GLD: 0.1
+  defensive:
+    SPY: 0.3
+    TLT: 0.2
+    GLD: 0.2
+    BIL: 0.3
+  custom:
+    SPY: 0.1666666667
+    QQQ: 0.1666666667
+    VEA: 0.1666666667
+    GLD: 0.1666666667
+    EEM: 0.1666666667
+    BIL: 0.1666666667
+buy_and_hold_preset: balanced
